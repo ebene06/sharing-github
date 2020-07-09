@@ -140,7 +140,7 @@ sns.regplot(x=sample_df["utility_id_ferc1"], y=sample_df["fuel_cost_per_mmbtu"],
 
 # In[5]:
 
-
+#KDE Plotting
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -148,7 +148,7 @@ import seaborn as sns
 fuel_data = pd.read_csv('fuel_ferc1.csv')
 sample_df = pd.DataFrame(fuel_data.sample(n=50, random_state=7), columns=['fuel_cost_per_unit_burned'])
 
-# KDE plot
+
 sns.kdeplot(sample_df['fuel_cost_per_unit_burned'], shade=True, color="b")
 plt.xlabel('sample_df')
 
